@@ -1,6 +1,6 @@
 {
   "name": "suitape",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "description": "A tiny wrapper for Tape to allow grouping tests in suites",
   "main": "suitape.js",
   "scripts": {

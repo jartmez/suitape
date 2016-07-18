@@ -7,7 +7,7 @@ let test = tape;
 
 const _isPromise = val => typeof val === 'object' &&
                           typeof val.then === 'function' &&
-                          typeof val === 'function';
+                          typeof val.catch === 'function';
 
 const _isEmpty = array => array.length === 0;
 
@@ -25,7 +25,11 @@ function suite(suiteName, suiteFn) {
       if(_isPromise(testReturnVal)) promises.push(testReturnVal);
     };
 
-    suiteFn(_testWrapper);
+    try {
+      suiteFn(_testWrapper);
+    } catch (err) {
+      t.end(err);
+    }
 
     if(_isEmpty(promises)) return t.end();
 
