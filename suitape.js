@@ -1,7 +1,7 @@
 'use strict';
 
 const tape = require('tape');
-const addAssertions = require('extend-tape');
+const _addAssertions = require('extend-tape');
 
 let test = tape;
 
