@@ -1,7 +1,7 @@
 {
   "name": "suitape",
-  "version": "1.0.3",
-  "description": "A tiny wrapper for tape",
+  "version": "1.0.4",
+  "description": "A tiny wrapper for Tape to allow grouping tests in suites",
   "main": "suitape.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
