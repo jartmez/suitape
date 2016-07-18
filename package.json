@@ -1,0 +1,28 @@
+{
+  "name": "suitape",
+  "version": "1.0.0",
+  "description": "A tiny wrapper for tape",
+  "main": "suitape.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jartmez/suitape.git"
+  },
+  "keywords": [
+    "tape",
+    "suite",
+    "test"
+  ],
+  "author": "Arturo Meza",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jartmez/suitape/issues"
+  },
+  "homepage": "https://github.com/jartmez/suitape#readme",
+  "dependencies": {
+    "extend-tape": "^1.2.0",
+    "tape": "^4.6.0"
+  }
+}
