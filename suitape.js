@@ -12,6 +12,7 @@ const _isPromise = val => typeof val === 'object' &&
 const _isEmpty = array => array.length === 0;
 
 const _buildAssertFn = (description, context) => (assertionType, ...args) => {
+  if(!context[assertionType]) return context.fail('Invalid ' + assertionType + ' assertion');
   context[assertionType].apply(context, [...args, description]);
 };
 
@@ -35,11 +36,7 @@ function suite(suiteName, suiteFn) {
 }
 
 function addAssertions(assertionsObj) {
-  test = addAssertions(tape, assertionsObj);
+  test = _addAssertions(tape, assertionsObj);
 }
 
-exports.suite = suite;
-exports.addAssertions = addAssertions;
-exports.tape = tape;
-
-module.exports = suite;
+module.exports = {suite, tape, addAssertions};
